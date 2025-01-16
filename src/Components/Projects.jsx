@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {assets, projectsData} from '../assets/assets'
 
+
 function Projects() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
