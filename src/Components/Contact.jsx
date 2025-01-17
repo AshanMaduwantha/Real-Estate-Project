@@ -1,5 +1,6 @@
 import React from 'react'
 import { toast } from 'react-toastify';
+import {motion} from 'framer-motion'
 
 function Contact() {
 
@@ -31,7 +32,12 @@ function Contact() {
     }; 
 
   return (
-    <div className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden' id='Contact'>
+    <motion.div
+    initial={{ opacity: 0 }}
+    transition={{ duration: 1 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    className='text-center p-6 py-20 lg:px-32 w-full overflow-hidden' id='Contact'>
         <h1 className='text-center text-2xl sm:text-4xl font-bold mb-2'>Contact <span className='text-2xl sm:text-4xl font-bold mb-2'>With Us</span></h1>
         <p className='text-center text-gray-500 mb-12 max-w-80 mx-auto'>Ready to make a Move? Let Build Your Future Together</p>
 
@@ -53,7 +59,7 @@ function Contact() {
         <button className='bg-blue-600 text-white py-2 px-12 mb-10 rounded'>{result ? result : "Send Message"}</button>
     </form>
 
-    </div>
+    </motion.div>
   )
 }
 
